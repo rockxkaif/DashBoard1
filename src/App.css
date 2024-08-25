@@ -1,38 +1,176 @@
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* SearchBar Styles */
+.search-bar {
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* Adjusted max-width for better appearance */
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar input:focus {
+  border-color: #007bff; /* Highlight color on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle shadow effect */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-bar input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* AddWidgetForm Styles */
+.add-widget-form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-widget-form select,
+.add-widget-form input,
+.add-widget-form button {
+  padding: 12px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.add-widget-form select {
+  width: 200px;
+}
+
+.add-widget-form input {
+  width: calc(100% - 220px);
+}
+
+.add-widget-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.add-widget-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Category Styles */
+.category {
+  margin-bottom: 30px;
+}
+
+.category h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Widget Container Styles */
+.widget-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Widget Styles */
+.widget {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.widget h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.widget p {
+  margin: 0;
+  color: #666;
+}
+
+.widget button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.widget button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .widget {
+    flex: 1 1 calc(50% - 20px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 768px) {
+  .widget {
+    flex: 1 1 100%;
+  }
+
+  .add-widget-form select,
+  .add-widget-form input,
+  .add-widget-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .add-widget-form input,
+  .add-widget-form button {
+    font-size: 14px;
   }
 }

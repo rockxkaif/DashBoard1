@@ -1,0 +1,25 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "CSPM Executive Dashboard",
+        "widgets": [
+          { "id": 1, "name": "Widget 1", "text": "Some random text" },
+          { "id": 2, "name": "Widget 2", "text": "Some random text" },
+          { "id": 4, "name": "Widget 4", "text": "Additional widget text" },
+          { "id": 5, "name": "Widget 5", "text": "More widget text" }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Another Category",
+        "widgets": [
+          { "id": 3, "name": "Widget 3", "text": "Some random text" },
+          { "id": 6, "name": "Widget 6", "text": "Additional widget text" },
+          { "id": 7, "name": "Widget 7", "text": "More widget text" },
+          { "id": 8, "name": "Widget 8", "text": "Even more widget text" }
+        ]
+      }
+    ]
+  }
+  
